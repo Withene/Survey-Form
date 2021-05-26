@@ -1,0 +1,227 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<style>
+  :root {
+    --color-grey: rgba(211, 211, 211, 0.5);
+    --color-black: rgb(0, 0, 0);
+  }
+  body {
+    background-image: url("src/img/abc.svg"), linear-gradient(155deg, #0515fb , #c900fb );
+    background-size: cover;
+
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .container {
+    margin-top: 20px;
+    color: rgb(5, 5, 5);
+  }
+
+  #title {
+    text-align: center;
+    margin: 0px;
+    color: #FFFFFF;
+  }
+
+  #description {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+  }
+
+  .divisao {
+    margin: 15px 65px;
+  }
+
+  .textup {
+    display: block;
+    margin: 0 25px;
+    width: 300px;
+    height: 38px;
+    border-radius: 0%;
+    border: 0px
+  }
+
+  .label {
+    color: rgba(0, 50, 255, 1);
+    font-weight: bold;
+    margin: 0px  20px;
+    margin-bottom: 500px;
+    font-size: 1.2em;
+  }
+
+  .Form-control {
+    background-color: rgb(241, 241, 241);
+    border-radius: 2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 680px;
+    padding: 10px 2px 1px 3px;
+    margin: 15px auto;
+  }
+
+  .svg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  input,
+  select,
+  textarea {
+    border-radius: 15px !important;
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=number],
+  select[id=dropdown],
+  textarea {
+    border: 1px solid #8405fb;
+    box-sizing: border-box;
+    margin: 5px auto;
+    text-indent: 5px;
+    outline: 0 ;
+  }
+
+  textarea,select[id=dropdown]:focus {
+    box-shadow: 0 0 0 0 !important;
+    outline: 0;
+    margin-top: 5px !important;
+  }
+  
+
+  input[type=checkbox],
+  input[class="input-radio"]
+  {
+    margin-top: 5px;
+    left: 20px;
+  }
+
+  .input-radio {
+    position: relative;
+    margin: 3px 21px 2px 15px;
+  }
+
+  .input-checkbox {
+    margin: 3px 21px 2px 15px;
+    position: relative;
+  }
+
+  .input-textarea {
+    min-height: 100px;
+    width: 300px;
+    padding: 0.625rem;
+    margin: 0 35px;
+    resize: none;
+  }
+
+  #submit {
+    display: block;
+    margin: 15px auto;
+    padding: 0.6rem;
+    width: 250px;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 1em;
+    border: 1px solid #8405fb;
+    background-color: #8405fb;
+    font-size: 1.2em;
+    color: white;
+  }
+
+  .p-define {
+    color: rgba(0, 50, 255, 1);
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0px 20px;
+  }
+
+
+</style>
+<html>
+
+
+<body>
+
+
+
+
+  <div class="container">
+
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a Survey for Sugestion to implement </p>
+
+    <div class="Form-control">
+      <form id="survey-form">
+
+        <div class="divisao">
+
+          <label for="name" id="name-label" class="label">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Name" class="textup" required>
+        </div>
+
+        <div class="divisao">
+
+          <label for="email" id="email-label" class="label">Email:</label>
+          <input id="email" class="textup" placeholder="Email" required type="email">
+        </div>
+
+        <div class="divisao">
+
+          <label for="number" id="number-label" class="label">Age:</label>
+          <input id="number" min="5" max="99" class="textup" placeholder="Age" required type="number">
+        </div>
+
+        <div class="divisao">
+          <label for="number" id="dropdown-label" class="label">Select Your Category:</label>
+          <select id="dropdown" name="category" required class="textup">
+            <option disabled selected value>Select Your Category</option>
+            <option value="student">Student</option>
+            <option value="trainee">Trainee</option>
+            <option value="junior">Junior</option>
+            <option value="pleno">Plenor</option>
+            <option value="senior">Senior</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="divisao">
+          <label for="number" id="ln" class="label">Which of the following do you know ?</label>
+          <label><input name="prefer" value="html" type="checkbox" class="input-checkbox" />HTML5</label>
+          <label><input name="prefer" value="css" type="checkbox" class="input-checkbox" />CSS</label>
+          <label><input name="prefer" value="js" type="checkbox" class="input-checkbox" />JS</label>
+          <label><input name="prefer" value="node" type="checkbox" class="input-checkbox" />Node</label>
+          <label><input name="prefer" value="laravel" type="checkbox" class="input-checkbox" />Laravel 8
+          </label>
+
+        </div>
+        <div class="divisao">
+          <p class="p-define">What time your have for Work ?</p>
+          <label> <input name="work" value="day" type="radio" class="input-radio" checked />Day</label>
+          <label><input name="work" value="Afternoon" type="radio" class="input-radio" />Afternoon</label>
+          <label><input name="work" value="night" type="radio" class="input-radio" />Night</label>
+
+        </div>
+        <div class="divisao">
+          <label for="number" id="textarea" class="label">Any Sugestions?:</label>
+          <textarea id="comments" class="input-textarea" name="comment"
+            placeholder="Comment About upgrades.."></textarea>
+        </div>
+        <div class="divisao">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+
+      </form>
+
+    </div>
+
+
+</body>
+
+</html>
